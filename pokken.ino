@@ -25,7 +25,6 @@ void loop() {
     return;
 
   usbTicked = 1;
-  // put your main code here, to run repeatedly:
   // Get the state of all buttons
   // INVERTED, easy parsing of SINGLE button presses at ONCE
   uint16_t btns = pad.getButtons();
