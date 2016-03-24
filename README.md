@@ -11,7 +11,7 @@ Use a SNES controller in Pokken Tournament, with the help of a Teensy
   install that)
 * Copy the files in `patched-files` over the installed files in `<ARDUINO_INSTALL_DIR>/hardware/teensy/avr/cores/teensy3`
 * Copy the `boards.txt` file in the repo over the one in `<ARDUINO_INSTALL_DIR>/hardware/teensy/avr`
-* Open the project, set the device type to "Teensy 3.1/3.2" and the USB type to "POKKEN"
+* Open the "pokken" sketch, set the device type to "Teensy 3.1/3.2", and set the USB type to "POKKEN"
 * Edit the `CLOCK`, `LATCH`, and `DATA` constants to point to the pins you wired up your SNES controller to
 
 Every button on the SNES controller is mapped to its equivalent button on the Hori Pokken controller, with the exception of ZL
