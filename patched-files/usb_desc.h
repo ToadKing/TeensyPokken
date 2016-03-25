@@ -338,10 +338,10 @@ let me know?  http://forum.pjrc.com/forums/4-Suggestions-amp-Bug-Reports
 #elif defined(USB_POKKEN)
   #define VENDOR_ID		0x0F0D
   #define PRODUCT_ID		0x0092
-  #define MANUFACTURER_NAME	{'H','O','R','I',' ','C','O','.',',','L','T','D.'}
-  #define MANUFACTURER_NAME_LEN	13
-  #define PRODUCT_NAME		{'P','O','K','K','E','N',' ','C','O','N','T','R','O','L','L','E','R'}
-  #define PRODUCT_NAME_LEN	17
+  #define MANUFACTURER_NAME	{'T','o','a','d',' ','K','i','n','g'}
+  #define MANUFACTURER_NAME_LEN	9
+  #define PRODUCT_NAME		{'T','e','e','n','s','y','P','o','k','k','e','n',' ','C','o','n','t','r','o','l','l','e','r'}
+  #define PRODUCT_NAME_LEN	23
   #define EP0_SIZE		64
   #define NUM_ENDPOINTS         2
   #define NUM_USB_BUFFERS	12
