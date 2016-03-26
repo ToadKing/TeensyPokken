@@ -25,7 +25,7 @@ void loop() {
   if (msTicked == 0)
     return;
 
-  msTicked = 1;
+  msTicked = 0;
 
   uint16_t btns = snes_read();
 
