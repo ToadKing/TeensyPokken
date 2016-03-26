@@ -36,10 +36,10 @@ void loop() {
     usbTimer = 0;
 
     uint16_t payload_buttons = 0;
-    payload_buttons |= (!!(debounced_btns & BTN_A) << 2);
-    payload_buttons |= (!!(debounced_btns & BTN_B) << 1);
-    payload_buttons |= (!!(debounced_btns & BTN_X) << 3);
     payload_buttons |= (!!(debounced_btns & BTN_Y) << 0);
+    payload_buttons |= (!!(debounced_btns & BTN_B) << 1);
+    payload_buttons |= (!!(debounced_btns & BTN_A) << 2);
+    payload_buttons |= (!!(debounced_btns & BTN_X) << 3);
     payload_buttons |= (!!(debounced_btns & BTN_L) << 4);
     payload_buttons |= (!!(debounced_btns & BTN_R) << 5);
     // ZL + ZR are bits 6 and 7, skip them
@@ -48,13 +48,13 @@ void loop() {
 
     byte hat = 0x0F;
 
-    if (debounced_btns & BTN_UP && debounced_btns & BTN_RIGHT)
+    if ((debounced_btns & BTN_UP) && (debounced_btns & BTN_RIGHT))
       hat = 0x01;
-    else if (debounced_btns & BTN_RIGHT && debounced_btns & BTN_DOWN)
+    else if ((debounced_btns & BTN_RIGHT) && (debounced_btns & BTN_DOWN))
       hat = 0x03;
-    else if (debounced_btns & BTN_DOWN && debounced_btns & BTN_LEFT)
+    else if ((debounced_btns & BTN_DOWN) && (debounced_btns & BTN_LEFT))
       hat = 0x05;
-    else if (debounced_btns & BTN_LEFT && debounced_btns & BTN_UP)
+    else if ((debounced_btns & BTN_LEFT) && (debounced_btns & BTN_UP))
       hat = 0x07;
     else if (debounced_btns & BTN_UP)
       hat = 0x00;
