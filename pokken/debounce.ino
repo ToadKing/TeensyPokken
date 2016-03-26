@@ -1,7 +1,7 @@
 // simple debouncer
 
 // configurable
-byte DEBOUNCE_TIME_MS = 6;
+const byte DEBOUNCE_TIME_MS = 6;
 
 uint16_t previous_states = 0;
 uint16_t previous_good_states = 0;
