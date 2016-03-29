@@ -35,6 +35,12 @@ void loop() {
   if (++usbTimer >= 8) {
     usbTimer = 0;
 
+    // filter out up+down and left+right
+    if ((debounced_btns & (BTN_UP | BTN_DOWN)) == (BTN_UP | BTN_DOWN))
+      debounced_btns &= ~(BTN_UP | BTN_DOWN);
+    if ((debounced_btns & (BTN_LEFT | BTN_RIGHT)) == (BTN_LEFT | BTN_RIGHT))
+      debounced_btns &= ~(BTN_LEFT | BTN_RIGHT);
+
     uint16_t payload_buttons = 0;
     payload_buttons |= (!!(debounced_btns & BTN_Y) << 0);
     payload_buttons |= (!!(debounced_btns & BTN_B) << 1);
